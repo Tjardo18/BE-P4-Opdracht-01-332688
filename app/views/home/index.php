@@ -21,6 +21,7 @@
             <li><a href="#" class="active">Home</a></li>
             <li><a href="<?= URLROOT; ?>/country">Country</a></li>
             <li><a href="<?= URLROOT; ?>/zangeres">Zangeressen</a></li>
+            <li><a href="<?= URLROOT; ?>/instructeur">Instructeurs</a></li>
         </ul>
 
         <div class="main">
