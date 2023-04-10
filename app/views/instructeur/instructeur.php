@@ -19,7 +19,6 @@
 
         <ul class="navbar">
             <li><a href="<?= URLROOT; ?>">Home</a></li>
-            <li><a href="<?= URLROOT; ?>/country">Country</a></li>
             <li><a href="<?= URLROOT; ?>/zangeres">Zangeressen</a></li>
             <li><a href="<?= URLROOT; ?>/instructeur" class="active">Instructeurs</a></li>
         </ul>
@@ -40,12 +39,19 @@
         <h1>
             <?= $data['title']; ?>
         </h1>
+        <h3>
+            Aantal instructeurs: <?= $data['TotalInstr']; ?>
+        </h3>
         <div class="card instructeur">
 
             <table>
                 <thead>
-                    <th>...</th>
-                    <th>...</th>
+                    <th>Voornaam</th>
+                    <th>Tussenvoegsel</th>
+                    <th>Achternaam</th>
+                    <th>Mobiel</th>
+                    <th>Datum in dienst</th>
+                    <th>Aantal sterren</th>
                 </thead>
                 <tbody>
                     <?= $data['rows']; ?>

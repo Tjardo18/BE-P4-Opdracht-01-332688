@@ -12,21 +12,25 @@ class Instructeur extends BaseController
     public function index()
     {
         $result = $this->instructeurModel->getInstructeurs();
+        $TotalInstructeurs = $this->instructeurModel->countInstructeurs();
 
         $rows = "";
         foreach ($result as $instructeur) {
             $rows .= "<tr>
-                        <td>$instructeur->Naam</td>
-                        <td>$instructeur->NettoWaarde</td>
-                        <td>$instructeur->Land</td>
+                        <td>$instructeur->Voornaam</td>
+                        <td>$instructeur->Tussenvoegsel</td>
+                        <td>$instructeur->Achternaam</td>
                         <td>$instructeur->Mobiel</td>
-                        <td>$instructeur->Leeftijd</td>
+                        <td>$instructeur->DatumInDienst</td>
+                        <td>$instructeur->AantalSterren</td>
                       </tr>";
         }
 
+
         $data = [
-            'title' => 'Top 5 beste instructeurs ter wereld',
-            'rows' => $rows
+            'title' => 'Instructeurs in dienst',
+            'rows' => $rows,
+            'TotalInstr' => $TotalInstructeurs['Total']
         ];
 
         $this->view('instructeur/instructeur', $data);

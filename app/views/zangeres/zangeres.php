@@ -19,7 +19,6 @@
 
         <ul class="navbar">
             <li><a href="<?= URLROOT; ?>">Home</a></li>
-            <li><a href="<?= URLROOT; ?>/country">Country</a></li>
             <li><a href="<?= URLROOT; ?>/zangeres" class="active">Zangeressen</a></li>
             <li><a href="<?= URLROOT; ?>/instructeur">Instructeurs</a></li>
         </ul>

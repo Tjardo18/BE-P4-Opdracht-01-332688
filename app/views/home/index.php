@@ -19,7 +19,6 @@
 
         <ul class="navbar">
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="<?= URLROOT; ?>/country">Country</a></li>
             <li><a href="<?= URLROOT; ?>/zangeres">Zangeressen</a></li>
             <li><a href="<?= URLROOT; ?>/instructeur">Instructeurs</a></li>
         </ul>
@@ -34,10 +33,7 @@
         </div>
     </header>
 
-
-
-
-    <h3><?= $data['title']; ?></h3>
+    <h2><?= $data['title']; ?></h2>
 
     <table border="1">
         <thead>

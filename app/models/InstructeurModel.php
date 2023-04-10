@@ -12,16 +12,27 @@ class InstructeurModel
     public function getInstructeurs()
     {
         $sql = "SELECT Id
-                        ,Naam
-                        ,NettoWaarde
-                        ,Land
+                        ,Voornaam
+                        ,Tussenvoegsel
+                        ,Achternaam
                         ,Mobiel
-                        ,Leeftijd
-                    FROM Zangeres
-                    ORDER BY NettoWaarde DESC;";
+                        ,DatumInDienst
+                        ,AantalSterren
+                    FROM Instructeur
+                    ORDER BY AantalSterren DESC;";
 
         $this->db->query($sql);
 
         return $this->db->resultSet();
+    }
+
+
+    public function countInstructeurs()
+    {
+        $sql = "SELECT COUNT(*) AS Total FROM Instructeur;";
+
+        $this->db->query($sql);
+
+        return $this->db->resultSetAssoc();
     }
 }
