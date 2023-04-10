@@ -22,7 +22,8 @@ class VoertuigModel
         INNER JOIN Voertuig ON Voertuig.Id = VoertuigInstructeur.VoertuigId
         INNER JOIN Instructeur ON Instructeur.Id = VoertuigInstructeur.InstructeurId
         INNER JOIN TypeVoertuig ON TypeVoertuig.Id = Voertuig.TypeVoertuigId
-        WHERE Instructeur.Id = $Id;";
+        WHERE Instructeur.Id = $Id
+        ORDER BY TypeVoertuig.Rijbewijscategorie;";
 
         $this->db->query($sql);
 
