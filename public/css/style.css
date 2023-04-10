@@ -83,8 +83,13 @@ body {
 }
 
 .instructeur {
-    width: 810px;
+    width: 920px;
     height: 220px;
+}
+
+.voertuig {
+    width: 735px;
+    height: 160px
 }
 
 h1 {

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= URLROOT; ?>/css/style.css">
-    <title>Instructeurs</title>
+    <title>Voertuigen</title>
 </head>
 
 <body>
@@ -40,19 +40,24 @@
             <?= $data['title']; ?>
         </h1>
         <h3>
-            Aantal instructeurs: <?= $data['TotalInstr']; ?>
+            Naam: <?= $data['fullName']; ?>
         </h3>
-        <div class="card instructeur">
+        <h3>
+            Datum in dienst: <?= $data['did']; ?>
+        </h3>
+        <h3>
+            Aantal sterren: <?= $data['TotalStars']; ?>
+        </h3>
 
+        <div class="card voertuig">
             <table>
                 <thead>
-                    <th>Voornaam</th>
-                    <th>Tussenvoegsel</th>
-                    <th>Achternaam</th>
-                    <th>Mobiel</th>
-                    <th>Datum in dienst</th>
-                    <th>Aantal sterren</th>
-                    <th>Voertuigen</th>
+                    <th>Type Voertuig</th>
+                    <th>Type</th>
+                    <th>Kenteken</th>
+                    <th>Bouwjaar</th>
+                    <th>Brandstof</th>
+                    <th>Rijbewijscategorie</th>
                 </thead>
                 <tbody>
                     <?= $data['rows']; ?>

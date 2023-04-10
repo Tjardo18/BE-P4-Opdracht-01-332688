@@ -23,9 +23,13 @@ class Instructeur extends BaseController
                         <td>$instructeur->Mobiel</td>
                         <td>$instructeur->DatumInDienst</td>
                         <td>$instructeur->AantalSterren</td>
+                        <td>
+                            <a href='voertuig/id/{$instructeur->Id}'>
+                                <i class='bx bxs-car' style='color:#29fd53'></i>
+                            </a>
+                        </td>
                       </tr>";
         }
-
 
         $data = [
             'title' => 'Instructeurs in dienst',
