@@ -21,6 +21,4 @@ class BaseController
             echo 'Model bestaat niet';
         }
     }
-
-
 }

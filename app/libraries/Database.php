@@ -17,8 +17,9 @@ class database
 
         try {
             $this->dbHandler = new PDO($conn, $this->dbUser, $this->dbPass);
-        } catch(PDOException $e) {
-            echo $e->getMessage();
+        } catch (PDOException $e) {
+            echo "<h1>Er is iets fout gegaan tijdens het verbinden met de database. Neem contact op met de Database Beheerder.</h1>";
+            console_log($e->getMessage());
         }
     }
 
