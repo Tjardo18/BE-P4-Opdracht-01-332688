@@ -94,6 +94,19 @@ INSERT INTO VoertuigInstructeur VALUES
 (NULL, 10, 5, '2020-02-02', '1', NULL, sysdate(6), sysdate(6));
 
 
+DROP TABLE IF EXISTS Users;
+CREATE TABLE IF NOT EXISTS Users(
+  Id INT PRIMARY KEY AUTO_INCREMENT,
+  Username VARCHAR(255) NOT NULL,
+  Password VARCHAR(255) NOT NULL,
+  IsActief BIT NOT NULL DEFAULT 1,
+  Opmerkingen VARCHAR(250) NULL DEFAULT NULL,
+  DatumAangemaakt DateTime(6) NOT NULL,
+  DatumGewijzigd DateTime(6) NOT NULL)
+  ENGINE = InnoDB;
+
+INSERT INTO users VALUES (NULL, 'Rijschoolhouder', '100%Koffie', 1, 'ADMIN ACCOUNT', sysdate(6), sysdate(6));
+
 -- Test Statement:
 SELECT Voertuig.Id AS VoertuigID, Voertuig.Kenteken, Voertuig.Type, Instructeur.Voornaam, Instructeur.Achternaam, TypeVoertuig.Rijbewijscategorie, DatumToekenning
 FROM VoertuigInstructeur

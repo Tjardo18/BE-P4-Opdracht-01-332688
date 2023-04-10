@@ -52,12 +52,7 @@
         <div class="card voertuig">
             <table>
                 <thead>
-                    <th>Type Voertuig</th>
-                    <th>Type</th>
-                    <th>Kenteken</th>
-                    <th>Bouwjaar</th>
-                    <th>Brandstof</th>
-                    <th>Rijbewijscategorie</th>
+                    <?= $data['th']; ?>
                 </thead>
                 <tbody>
                     <?= $data['rows']; ?>

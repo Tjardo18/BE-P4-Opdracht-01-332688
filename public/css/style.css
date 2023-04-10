@@ -89,7 +89,8 @@ body {
 
 .voertuig {
     width: 735px;
-    height: 160px
+    height: 160px;
+    text-align: center;
 }
 
 h1 {
