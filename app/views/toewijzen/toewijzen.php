@@ -48,17 +48,17 @@
             Aantal sterren: <?= $data['TotalStars']; ?>
         </h3>
 
-        <div class="card voertuig">
-            <div class="ruimte"></div>
-            <table>
-                <thead>
-                    <?= $data['th']; ?>
-                </thead>
-                <tbody>
-                    <?= $data['rows']; ?>
-                </tbody>
-            </table>
-            <div class="ruimte"></div>
+        <div class="card">
+            <div class="ruimte">
+                <table>
+                    <thead>
+                        <?= $data['th']; ?>
+                    </thead>
+                    <tbody>
+                        <?= $data['rows']; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

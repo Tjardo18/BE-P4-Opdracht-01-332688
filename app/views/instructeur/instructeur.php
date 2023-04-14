@@ -41,22 +41,23 @@
         <h3>
             Aantal instructeurs: <?= $data['TotalInstr']; ?>
         </h3>
-        <div class="card instructeur">
-
-            <table>
-                <thead>
-                    <th>Voornaam</th>
-                    <th>Tussenvoegsel</th>
-                    <th>Achternaam</th>
-                    <th>Mobiel</th>
-                    <th>Datum in dienst</th>
-                    <th>Aantal sterren</th>
-                    <th>Voertuigen</th>
-                </thead>
-                <tbody>
-                    <?= $data['rows']; ?>
-                </tbody>
-            </table>
+        <div class="card">
+            <div class="ruimte">
+                <table>
+                    <thead>
+                        <th>Voornaam</th>
+                        <th>Tussenvoegsel</th>
+                        <th>Achternaam</th>
+                        <th>Mobiel</th>
+                        <th>Datum in dienst</th>
+                        <th>Aantal sterren</th>
+                        <th>Voertuigen</th>
+                    </thead>
+                    <tbody>
+                        <?= $data['rows']; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

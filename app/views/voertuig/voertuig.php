@@ -49,21 +49,21 @@
         </h3>
 
         <div class="card voertuig">
-            <div class="ruimte"></div>
-            <table>
-                <thead>
-                    <?= $data['th']; ?>
-                </thead>
-                <tbody>
-                    <?= $data['rows']; ?>
-                </tbody>
-            </table>
-            <div class="button">
-                <a href="../../toewijzen/id/<?= $data['id']; ?>">
-                    <button>Voertuig toevoegen</button>
-                </a>
+            <div class="ruimte">
+                <table>
+                    <thead>
+                        <?= $data['th']; ?>
+                    </thead>
+                    <tbody>
+                        <?= $data['rows']; ?>
+                    </tbody>
+                </table>
+                <div class="button">
+                    <a href="../../toewijzen/id/<?= $data['id']; ?>">
+                        <button>Voertuig toevoegen</button>
+                    </a>
+                </div>
             </div>
-            <div class="ruimte"></div>
         </div>
     </div>
 
