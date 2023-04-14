@@ -47,7 +47,8 @@ class Voertuig extends BaseController
             'fullName' => $instructeur['Voornaam'] . ' ' . $instructeur['Tussenvoegsel'] . ' ' . $instructeur['Achternaam'],
             'did' => $instructeur['DatumInDienst'],
             'TotalStars' => $instructeur['AantalSterren'],
-            'th' => $th
+            'th' => $th,
+            'id' => $id
         ];
 
         $this->view('voertuig/voertuig', $data);

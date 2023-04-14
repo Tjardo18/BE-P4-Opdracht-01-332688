@@ -11,13 +11,13 @@ class Toewijzen extends BaseController
 
     public function index($id = NULL)
     {
-        $result = $this->toewijzenModel->getNietToegewezen($id);
+        $result = $this->toewijzenModel->getNietToegewezen();
         $instructeur = $this->toewijzenModel->getInstructeur($id);
 
         if ($result == null) {
             $th = "";
-            $rows = "<h2>Alle voertuigen zijn al toegewezen</h2>";
-            header("refresh:3;../../instructeur");
+            $rows = "<h2>Er zijn geen voertuigen meer om toe te voegen</h2>";
+            header("refresh:3;../../voertuig/id/$id");
         } else {
             $th = "<th>Type Voertuig</th>
             <th>Type</th>
@@ -27,9 +27,10 @@ class Toewijzen extends BaseController
             <th>Rijbewijscategorie</th>
             <th>Toewijzen</th>";
 
-            $result = $this->toewijzenModel->getNietToegewezen($id);
+            $result = $this->toewijzenModel->getNietToegewezen();
             $rows = "";
             foreach ($result as $toewijzen) {
+                $voertuig = $toewijzen->VoertuigID;
                 $rows .= "<tr>
                 <td>$toewijzen->TypeVoertuig</td>
                 <td>$toewijzen->Type</td>
@@ -38,7 +39,7 @@ class Toewijzen extends BaseController
                 <td>$toewijzen->Brandstof</td>
                 <td>$toewijzen->Rijbewijscategorie</td>
                 <td>
-                    <button onclick='toewijzen($toewijzen->Id)'>
+                    <button onclick='toewijzen($voertuig, $id)'>
                         <i class='bx bx-plus-medical' style='color:#29fd53'></i>
                     </button>
                 </td>
