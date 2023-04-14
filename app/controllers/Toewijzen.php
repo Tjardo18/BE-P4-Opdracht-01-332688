@@ -31,6 +31,7 @@ class Toewijzen extends BaseController
             $rows = "";
             foreach ($result as $toewijzen) {
                 $voertuig = $toewijzen->VoertuigID;
+
                 $rows .= "<tr>
                 <td>$toewijzen->TypeVoertuig</td>
                 <td>$toewijzen->Type</td>
@@ -39,9 +40,9 @@ class Toewijzen extends BaseController
                 <td>$toewijzen->Brandstof</td>
                 <td>$toewijzen->Rijbewijscategorie</td>
                 <td>
-                    <button onclick='toewijzen($voertuig, $id)'>
+                    <a href='../../create/id/$voertuig?voertuig=$voertuig&instructeur=$id'>
                         <i class='bx bx-plus-medical' style='color:#29fd53'></i>
-                    </button>
+                    </a>
                 </td>
                 </tr>";
             }
