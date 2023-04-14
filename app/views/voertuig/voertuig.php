@@ -49,6 +49,7 @@
         </h3>
 
         <div class="card voertuig">
+            <div class="ruimte"></div>
             <table>
                 <thead>
                     <?= $data['th']; ?>
@@ -57,6 +58,10 @@
                     <?= $data['rows']; ?>
                 </tbody>
             </table>
+            <div class="button">
+                <button>Voertuig toevoegen</button>
+            </div>
+            <div class="ruimte"></div>
         </div>
     </div>
 
