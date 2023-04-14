@@ -45,14 +45,4 @@ class ToewijzenModel
 
         return $this->db->resultSetAssoc();
     }
-
-    public function toewijzen($VoertuigId, $InstructeurId)
-    {
-        $sql = "INSERT INTO VoertuigInstructeur VALUES (NULL, $VoertuigId, $InstructeurId, sysdate(), 1, NULL, sysdate(6), sysdate(6));";
-
-        $this->db->query($sql);
-
-        return $this->db->resultSet();
-        header("refresh:3;../../instructeur");
-    }
 }
